@@ -1,0 +1,11 @@
+
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/
+mlruns/
+*.pkl
+!churn_rf_simple.pkl
+.ipynb_checkpoints/
+.DS_Store
