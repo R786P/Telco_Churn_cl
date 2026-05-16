@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import os
 
-MODEL_PATH = "churn_rf_simple.pkl"
+MODEL_PATH = "churn_rf_v1_optuna.pkl"
 model = scaler = ohe = num_cols = cat_cols = None
 model_loaded = False
 
