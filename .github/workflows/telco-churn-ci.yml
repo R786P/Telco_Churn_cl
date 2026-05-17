@@ -1,8 +1,7 @@
 name: Telco Churn CI
 
-# ✅ Workflow-level environment variable - warning hata dega
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true  # ✅ Warning suppress karega
 
 on:
   push:
