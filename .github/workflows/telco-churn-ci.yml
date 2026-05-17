@@ -1,6 +1,6 @@
 name: Telco Churn CI
 
-# ✅ Ye line pure workflow ke liye Node.js 24 force karegi
+# ✅ Workflow-level environment variable - warning hata dega
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
