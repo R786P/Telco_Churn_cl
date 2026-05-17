@@ -9,12 +9,10 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5  # ✅ Updated to v5 (Node.js 24 native)
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v5
@@ -26,13 +24,9 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Verify Environment (Safe Check)
+    - name: Verify Environment
       run: |
         python -c "import pandas; import sklearn; import joblib; print('✅ Environment OK')"
-
-    # - name: Run Tests (Temporarily Disabled for Stability)
-    #   run: |
-    #     pytest tests/ -v
 
     - name: Build Success
       run: echo "🚀 Pipeline Successful! App is ready."
