@@ -1,5 +1,9 @@
 name: Telco Churn CI
 
+# ✅ Ye line pure workflow ke liye Node.js 24 force karegi
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   push:
     branches: [ "main" ]
@@ -12,7 +16,7 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v5  # ✅ Updated to v5 (Node.js 24 native)
+      uses: actions/checkout@v4
 
     - name: Set up Python 3.10
       uses: actions/setup-python@v5
